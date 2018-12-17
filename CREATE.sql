@@ -7,7 +7,7 @@ USE university;
 CREATE TABLE student (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     student_name VARCHAR(255) NOT NULL,
-    personal_number VARCHAR(10) UNIQUE NOT NULL , /*номер заліковки*/
+    personal_number VARCHAR(8) UNIQUE NOT NULL, /*номер заліковки*/
     birth_date DATE NOT NULL,
     admission_date DATE NOT NULL,
     group_id INT,
@@ -65,7 +65,7 @@ CREATE TABLE department (
 
 CREATE TABLE grade (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    grade VARCHAR(3) NOT NULL,
+    grade INT NOT NULL,
     student_id INT,
     subject_id INT,
     grade_book_id INT,
