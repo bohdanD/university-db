@@ -2,13 +2,12 @@
 /* create database */
 CREATE DATABASE IF NOT EXISTS university;
 
-USE university
+USE university;
 
 CREATE TABLE student (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     student_name VARCHAR(255) NOT NULL,
     personal_number VARCHAR(10) UNIQUE NOT NULL , /*номер заліковки*/
-    group_number VARCHAR(10) NOT NULL,
     birth_date DATE NOT NULL,
     admission_date DATE NOT NULL,
     group_id INT,
